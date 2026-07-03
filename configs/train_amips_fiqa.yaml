@@ -1,0 +1,44 @@
+seed: 0
+
+dataloader:
+  trn_batch_size: 4096
+  val_batch_size: 256
+  num_trn_steps: 100_000
+  num_val_steps:
+  eval_every: 10_000
+
+loss:
+  score_weight: 0.01
+  target_weight: 1.0
+
+checkpoint:
+  dir:
+  save_every: 10_000
+  max_to_keep:
+
+model:
+  model: keynet
+  ema_decay: 0.9684910757595268
+  depth: 8
+  parameters_fraction: 0.2
+  use_bias: true
+  wx_inject: 4
+  multiplier: 1.0
+  keynet_resnet: false
+  act_fn: soft_leaky_relu
+  act_fn_negative_slope: 0.1
+  act_fn_beta: 20.0
+
+optimizer:
+  init_value: 0.0
+  peak_value: 0.0028284271247461905
+  end_value: 0.0
+  warmup_steps: 1_000
+  grad_clip: 1.0
+
+faiss:
+  n_clusters:
+  natural_nprobe:
+  projected_nprobe:
+  k_values:
+  num_faiss_steps:

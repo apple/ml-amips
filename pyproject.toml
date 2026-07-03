@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amips"
+version = "1.0.0"
+description = "Support-function approximation for approximate maximum inner-product search."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "chex",
+    "datasets",
+    "faiss-cpu",
+    "flax",
+    "grain",
+    "jax",
+    "numpy",
+    "omegaconf",
+    "optax",
+    "orbax-checkpoint",
+    "ott-jax[neural] @ git+https://github.com/ott-jax/ott.git@e241ec3d4",
+    "sentence-transformers",
+    "tqdm",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

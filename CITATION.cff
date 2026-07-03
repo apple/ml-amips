@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+title: "Amortizing Maximum Inner Product Search with Learned Support Functions"
+type: software
+message: "Please consider citing our paper if you find this work useful in your research."
+authors:
+  - family-names: Olausson
+    given-names: "Theo X."
+  - family-names: Monteiro
+    given-names: João
+  - family-names: Klein
+    given-names: Michal
+  - family-names: Cuturi
+    given-names: Marco
+repository-code: "https://github.com/apple/ml-amips"
+url: "https://arxiv.org/abs/2603.08001"
+preferred-citation:
+  title: "Amortizing Maximum Inner Product Search with Learned Support Functions"
+  type: article
+  authors:
+    - family-names: Olausson
+      given-names: "Theo X."
+    - family-names: Monteiro
+      given-names: João
+    - family-names: Klein
+      given-names: Michal
+    - family-names: Cuturi
+      given-names: Marco
+  year: 2026
+  url: "https://arxiv.org/abs/2603.08001"
+  identifiers:
+    - type: other
+      value: "arXiv:2603.08001"
+      description: arXiv preprint

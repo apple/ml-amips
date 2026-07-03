@@ -1,0 +1,55 @@
+seed: 0
+
+dataloader:
+  trn_batch_size: 4096
+  val_batch_size: 256
+  num_trn_steps: 732_421
+  num_val_steps:    # null -> evaluate over the whole test split
+  eval_every: 25_000
+
+loss:
+  score_weight: 0.01
+  target_weight: 1.0
+
+checkpoint:
+  dir:
+  save_every: 25_000
+  max_to_keep:
+
+model:
+  model: keynet # supportnet or keynet
+  ema_decay: 0.9684910757595268
+  depth: 8
+  parameters_fraction: 0.2
+  use_bias: true
+  wx_inject: 4
+  multiplier: 1.0
+  # keynet only
+  keynet_resnet: false
+  # supportnet only
+  supportnet_principled_init: true
+  supportnet_rectifier_fn: identity
+  supportnet_homogenize: true
+  # act_fn params
+  act_fn: soft_leaky_relu
+  act_fn_negative_slope: 0.1
+  act_fn_beta: 20.0
+
+optimizer:
+  init_value: 0.0
+  peak_value: 0.0004525483399593905
+  end_value: 5.656854249492381e-05
+  warmup_steps: 18_310
+  grad_clip: 1.0
+
+faiss:
+  # null -> derived from the num keys:
+  # n_clusters = int(num_keys ** 0.5)
+  # natural_nprobe = int(0.05 * n_clusters)
+  # projected_nprobe = int(0.05 * n_clusters)
+  # k_values  = [int(k_frac * n_clusters) for k_frac in (0.0001, 0.001, 0.005)]
+  n_clusters:
+  natural_nprobe:
+  projected_nprobe:
+  k_values:
+  num_faiss_steps:
