@@ -24,9 +24,6 @@ AMIPS support-function approximator:
 bash scripts/setup.sh
 ```
 
-This installs the `amips` package (with `ott-jax` pinned to the commit carrying the
-KeyNet final-layer fix) and then the matched GPU JAX stack on top.
-
 Then run each stage with `python scripts/<stage>.py` as shown below.
 
 ## 1. Embed the dataset
@@ -105,14 +102,16 @@ whole FIQA pipeline end to end.
 If you find our work useful, please consider citing us as:
 
 ```bibtex
-@misc{
-    olausson2026amips,
-    title={Amortizing Maximum Inner Product Search with Learned Support Functions},
-    author={Theo X. Olausson and João Monteiro and Michal Klein and Marco Cuturi},
-    year={2026},
-    eprint={2603.08001},
-    archivePrefix={arXiv},
-    primaryClass={cs.LG},
-    url={https://arxiv.org/abs/2603.08001},
+@inproceedings{olausson2026amips,
+    title         = {Amortized Maximum Inner Product Search with Learned Support Functions},
+    author        = {Theo X. Olausson and João Monteiro and Michal Klein and Marco Cuturi},
+    booktitle     = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
+    series        = {Proceedings of Machine Learning Research},
+    year          = {2026},
+    publisher     = {PMLR},
+    eprint        = {2603.08001},
+    archivePrefix = {arXiv},
+    primaryClass  = {cs.LG},
+    url           = {https://arxiv.org/abs/2603.08001},
 }
 ```
